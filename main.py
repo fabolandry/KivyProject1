@@ -158,8 +158,6 @@ def collect_data(input_value):
                 text['near_earth_objects'][input_value][i]['estimated_diameter']['miles']['estimated_diameter_max'])
             lst.append(dic)
             i = i + 1
-
-    print(total_num)
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('NEOTABLE')
     for i in range(0, len(lst)):
